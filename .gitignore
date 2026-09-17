@@ -1,0 +1,5 @@
+# Local database backups (regenerate with scripts/backup.sh)
+backups/*.dump
+
+# OS
+.DS_Store
