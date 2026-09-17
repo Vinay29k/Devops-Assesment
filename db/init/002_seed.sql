@@ -30,7 +30,7 @@ BEGIN
             now() - (random() * interval '90 days')
         );
 
-        -- ~70% of bookings get 1-3 lifecycle events
+   
         IF random() < 0.7 THEN
             v_num_events := 1 + floor(random() * 3)::int;
             FOR j IN 1..v_num_events LOOP

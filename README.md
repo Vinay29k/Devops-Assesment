@@ -54,7 +54,7 @@ CREATE INDEX idx_hotel_bookings_city_created_at
     INCLUDE (org_id, status, amount);
 ```
 
-**Why this shape:** `city` is an equality filter and, across a multi-city
+Why this shape: `city` is an equality filter and, across a multi-city
 dataset, the most selective one, so it leads the index. `created_at` is a
 range filter and comes second, letting Postgres do one contiguous index
 range scan instead of a full table scan. `org_id`, `status`, and `amount`
